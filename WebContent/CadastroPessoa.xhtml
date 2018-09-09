@@ -17,15 +17,15 @@
 			<h:panelGrid columns="2" cellpadding="5">
 
 				<p:outputLabel for="itNome" value="Nome:" />
-				<p:inputText id="itNome" value="#{pessoaController.pessoa.nome}"
+				<p:inputText id="itNome" value="#{pessoaController.entity.nome}"
 					required="true" />
 
 				<p:outputLabel for="itEndereco" value="Endereço:" />
 				<p:inputText id="itEndereco"
-					value="#{pessoaController.pessoa.endereco}" required="true" />
+					value="#{pessoaController.entity.endereco}" required="true" />
 
 				<p:outputLabel for="itEmail" value="Email:" />
-				<p:inputText id="itEmail" value="#{pessoaController.pessoa.email}"
+				<p:inputText id="itEmail" value="#{pessoaController.entity.email}"
 					required="true" />
 
 			</h:panelGrid>
@@ -33,8 +33,14 @@
 			<p:commandButton value="incluir" update="panel dataTable" process="@this panel"
 				actionListener="#{pessoaController.incluir}" icon="ui-icon-check" />
 
-			<p:commandButton value="limpar" update="panel" process="@this"
+			<p:commandButton value="limpar" update="panel dataTable" process="@this panel"
 				actionListener="#{pessoaController.limpar}" icon="ui-icon-check" />
+				
+			<p:commandButton value="alterar" update="panel dataTable" process="@this panel"
+				actionListener="#{pessoaController.alterar}" icon="ui-icon-check" />
+				
+			<p:commandButton value="excluir" update="panel dataTable" process="@this panel"
+				actionListener="#{pessoaController.remover}" icon="ui-icon-delete" />
 
 		</p:panel>
 
@@ -43,17 +49,22 @@
 				<h:outputText value="#{pessoa.id}" />
 			</p:column>
 
-			<p:column headerText="Year">
-				<h:outputText value="#{pessoa.nome}" />
+			<p:column headerText="Nome">
+				<p:commandLink value="#{pessoa.nome}" process="@this" update="@form:panel" >
+				<f:setPropertyActionListener 
+						value="#{pessoa}" 
+						target="#{pessoaController.entity}"/>
+				</p:commandLink>
 			</p:column>
 
-			<p:column headerText="Brand">
+			<p:column headerText="Endereço">
 				<h:outputText value="#{pessoa.endereco}" />
 			</p:column>
 
-			<p:column headerText="Color">
+			<p:column headerText="E-mail">
 				<h:outputText value="#{pessoa.email}" />
 			</p:column>
+			
 		</p:dataTable>
 
 	</h:form>
