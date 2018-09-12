@@ -8,7 +8,7 @@ import br.unitins.topicos2.model.Pessoa;
 
 @Named
 @javax.faces.view.ViewScoped
-public class PessoaController extends Controller {
+public class PessoaController extends Controller<Pessoa> {
 
 	private static final long serialVersionUID = 8637843622408548669L;
 

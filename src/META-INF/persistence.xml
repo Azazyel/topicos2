@@ -4,7 +4,7 @@
 		<class>br.unitins.topicos2.model.DefaultEntity</class>
 		<class>br.unitins.topicos2.model.Pessoa</class>
 	
-	<properties>
+		<properties>
 			<property name="javax.persistence.jdbc.url"
 				value="jdbc:postgresql://localhost:5433/topicos2db?useUnicode=true&amp;characterEncoding=UTF-8&amp;characterSetResults=UTF-8" />
 				

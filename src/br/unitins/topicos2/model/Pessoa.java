@@ -6,7 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.Transient;
 
 @Entity
-public class Pessoa extends DefaultEntity {
+public class Pessoa extends DefaultEntity<Pessoa> {
 
 	private static final long serialVersionUID = 78323400221046162L;
 	
