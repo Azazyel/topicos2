@@ -10,10 +10,9 @@ import br.unitins.topicos2.model.DefaultEntity;
 
 public abstract class Controller<T extends DefaultEntity<T>> implements Serializable {
 	
-	
 	private static final long serialVersionUID = 1590669890713345451L;
 
-private EntityManager em = null;
+	private EntityManager em = null;
 	
 	protected T entity = null;
 	

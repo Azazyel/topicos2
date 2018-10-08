@@ -1,7 +1,6 @@
 package br.unitins.topicos2.model;
 
 import java.util.Date;
-
 import javax.persistence.Entity;
 import javax.persistence.Transient;
 

@@ -1,7 +1,6 @@
 package br.unitins.topicos2.controller;
 
 import java.util.List;
-
 import javax.inject.Named;
 import br.unitins.topicos2.Repository.PessoaRepository;
 import br.unitins.topicos2.model.Pessoa;
